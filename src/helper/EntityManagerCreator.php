@@ -11,7 +11,7 @@ class EntityManagerCreator
     {
         // Create a simple "default" Doctrine ORM configuration for Attributes
         $config = ORMSetup::createAttributeMetadataConfiguration(
-            array(__DIR__."/src"), true,
+            array(__DIR__."/.."), true,
         );
 
         // configuring the database connection
