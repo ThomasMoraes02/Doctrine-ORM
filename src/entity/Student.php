@@ -20,7 +20,11 @@ class Student
     public function __construct(
         // Dizendo que é uma coluna
         #[Column]
-        public readonly string $name
+        public string $name
     ) {
     }
 }
+
+/**
+ * readonly = só para leitura
+ */
