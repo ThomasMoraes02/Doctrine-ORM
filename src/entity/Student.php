@@ -14,7 +14,7 @@ class Student
     #[Id]
     #[GeneratedValue]
     #[Column]
-    public readonly int $id;
+    public int $id;
 
     // Passando parâmetro e já inicializando (readonly sem setar outro valor)
     public function __construct(
