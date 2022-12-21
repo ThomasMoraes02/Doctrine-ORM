@@ -35,6 +35,11 @@ class Student
         $phone->setStudent($this);
     }
 
+    /**
+     * 
+     *
+     * @return Collection<Phone>
+     */
     public function phones(): iterable
     {
         return $this->phones;
