@@ -12,12 +12,8 @@ $entityManager = EntityManagerCreator::createEntityManager();
 $student = new Student($argv[1]);
 
 // Adicionando telefones
-$phone1 = new Phone($argv[2]);
-$phone2 = new Phone($argv[3]);
-$student->addPhone($phone1);
-$student->addPhone($phone2);
-$entityManager->persist($phone1);
-$entityManager->persist($phone2);
+$student->addPhone(new Phone($argv[2]));
+$student->addPhone(new Phone($argv[3]));
 
 $entityManager->persist($student);
 

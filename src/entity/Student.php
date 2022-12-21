@@ -17,7 +17,7 @@ class Student
     #[Id, GeneratedValue, Column]
     public int $id;
 
-    #[OneToMany(targetEntity:Phone::class, mappedBy:"student")]
+    #[OneToMany(targetEntity:Phone::class, mappedBy:"student", cascade:["persist"])]
     private Collection $phones;
 
     // Passando parâmetro e já inicializando (readonly sem setar outro valor)
