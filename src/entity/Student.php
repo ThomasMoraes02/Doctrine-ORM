@@ -18,7 +18,7 @@ class Student
     public int $id;
 
     #[OneToMany(targetEntity:Phone::class, mappedBy:"student")]
-    private readonly Collection $phones;
+    private Collection $phones;
 
     // Passando parâmetro e já inicializando (readonly sem setar outro valor)
     public function __construct(
