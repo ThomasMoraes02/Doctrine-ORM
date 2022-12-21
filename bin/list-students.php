@@ -1,5 +1,6 @@
 <?php
 
+use Alura\Doctrine\entity\Course;
 use Alura\Doctrine\entity\Phone;
 use Alura\Doctrine\entity\Student;
 use Alura\Doctrine\helper\EntityManagerCreator;
@@ -24,6 +25,9 @@ foreach($studentsList as $student) {
     // foreach($student->phones() as $phone) {
     //     echo $phone->number . PHP_EOL;
     // }
+
+    echo "Cursos:\n";
+    echo implode(', ', $student->couses()->map(fn(Course $course) => $course->name)->toArray());
 
     echo PHP_EOL;
 }
