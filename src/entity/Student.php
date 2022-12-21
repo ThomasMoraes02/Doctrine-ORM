@@ -55,6 +55,16 @@ class Student
     {
         return $this->courses;
     }
+
+    public function enrollInCourse(Course $course): void
+    {
+        if($this->courses->contains($course)) {
+            return;
+        }
+        
+        $this->courses->add($course);
+        $course->addStudent($this);
+    }
 }
 
 /**
